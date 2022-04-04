@@ -7,7 +7,7 @@ function converter() {
     fetch(url)
         .then((response) => response.json())
         .then(json => {
-            soma = (valor * json[moedaA + moedaB].bid)
+            soma = (valor * json[moedaA].bid)
             soma = soma.toFixed(2)
             let res = soma.replace(".", ",")
             document.getElementById('res1').innerHTML = "Resultado"
